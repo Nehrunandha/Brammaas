@@ -24,7 +24,7 @@
 /* HeroSection */
 .hero-section {
   height: 100vh;
-  background-image: url('N:\react\New folder (2)\src\assets\school.jpg'); /* Adjust path */
+  background-image: url('./assets/school.jpg'); /* Adjust path */
   background-size: cover;
   background-position: center;
   position: relative;
