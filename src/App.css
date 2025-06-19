@@ -528,7 +528,7 @@ background: linear-gradient(90deg, #FFEAC8 0%, rgba(255, 243, 226, 0.85) 50%, rg
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
-  background-image: url("N:\react\New folder\Brammaas\src\assets\infrastructure back.jpg");
+  background-image: url('./assets/infrastructure back.jpg');
   background-size: cover;
   }
 
