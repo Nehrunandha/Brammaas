@@ -1,5 +1,5 @@
 import React from 'react';
-import schoolImage from '../../assets/school.jpg'; // Ensure correct path
+import schoolImage from '../../assets/playschool.jpg'; // Ensure correct path
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AboutSchool = () => {
@@ -12,13 +12,13 @@ const AboutSchool = () => {
             <img
               src={schoolImage}
               alt="School Building"
-              className="img-fluid rounded shadow"
+              className="img-fluid rounded shadow mt-4 ml-3"
             />
           </div>
 
           {/* Text Content Section */}
           <div className="col-12 col-md-6">
-            <h2 className="fw-bold pr mb-3">About Our School</h2>
+            <h2 className="fw-bold pr mb-3" style={{color:'#000863', fontSize:'70px'}}>About Our School</h2>
             <h4 className="mb-3">
               Brammaas Vidhyalaya CBSE Senior Secondary School
             </h4>
@@ -28,7 +28,7 @@ const AboutSchool = () => {
               Group of Schools. Known for its extraordinary education quality and holistic
               development, hailing from the coastal town…
             </p>
-            <button className="btn btn-primary">
+            <button className="btn  btn-outline-primary mt-5">
               Read more <span className="ms-1">&#10140;</span>
             </button>
           </div>
@@ -36,7 +36,7 @@ const AboutSchool = () => {
       </div>
       <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/4ba48b900aaeaf0506a33fcaf297b4400147b2a5?placeholderIfAbsent=true&apiKey=e21b74e9a59543a1829d05a9e69daf64"
-          className="img-fluid w-100 mt-4  shadow-sm "
+          className="img-fluid w-100 mt-4  shadow-sm " 
           alt=""
         />
     </section>

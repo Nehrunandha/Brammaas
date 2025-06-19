@@ -25,26 +25,35 @@ const Gallery = () => {
       <div className="container">
         <div className="row g-4">
           {galleryItems.map((item, index) => (
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={index}>
-              <div className="card h-100 border-0 shadow-sm">
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3 position-relative" key={index}>
+              <div className="card h-100 border-0 shadow-sm  overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title || `Gallery image ${index + 1}`}
                   className="card-img-top"
                   style={{ objectFit: "cover", height: "200px" }}
                 />
-                {item.title && (
-                  <div className="card-body p-2">
-                    <p className="card-text text-center small fw-medium text-dark">{item.title}</p>
-                  </div>
-                )}
+              {item.title && (
+    <div
+      className="position-absolute w-100 text-white text-center py-2"
+      style={{
+        background: 'rgba(0, 0, 0, 0.4)',
+        fontSize: '1rem',
+        fontWeight: '600',
+        bottom:0
+      }}
+    >
+      {item.title}
+  </div>
+)}
+
               </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-4">
-          <button className="btn btn-warning text-white fw-bold px-4 py-2 rounded-pill">
+        <div className="text-end mt-4">
+          <button className="btn btn-outline-primary  fw-bold px-4 py-2 rounded-pill">
             View All
           </button>
         </div>

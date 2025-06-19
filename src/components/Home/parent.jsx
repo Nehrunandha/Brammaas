@@ -36,10 +36,10 @@ const ParentsTestimonials = () => {
 
       {/* Testimonial Cards */}
       <div className="container">
-        <div className="row justify-content-center g-4">
+        <div className="row justify-content-center g-5">
           {testimonials.map((item, index) => (
-            <div className="col-12 col-sm-6 col-lg-4" key={index}>
-              <div className="bg-white rounded shadow p-4 pt-5 position-relative text-center h-100">
+            <div className="col-12 col-sm-6 col-lg-4 " key={index}>
+              <div className="bg-white rounded shadow p-4 pt-5 position-relative text-center h-100 mt-3 mb-sm-5">
                 <img
                   src={item.image}
                   alt={item.name}
@@ -56,9 +56,9 @@ const ParentsTestimonials = () => {
                     <img key={i} src={star} alt="star" className="mx-1" style={{ width: '20px' }} />
                   ))}
                 </div>
-                <button className="btn btn-warning text-white fw-bold">
+                {/* <button className="btn btn-warning text-white fw-bold">
                   Read More ➔
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
