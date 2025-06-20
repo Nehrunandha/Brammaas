@@ -2,7 +2,9 @@ import React from 'react';
 import schoolImage from '../../assets/playschool.jpg'; // Ensure correct path
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 const AboutSchool = () => {
+  
   return (
     <section className=" bg-light mb-0">
       <div className="container">
@@ -28,7 +30,8 @@ const AboutSchool = () => {
               Group of Schools. Known for its extraordinary education quality and holistic
               development, hailing from the coastal town…
             </p>
-            <button className="btn  btn-outline-primary mt-5">
+            <button className="btn  btn-outline-primary mt-5" 
+            onClick={() => window.open('http://192.168.137.1:3000/AboutUs', '_blank')}>
               Read more <span className="ms-1">&#10140;</span>
             </button>
           </div>

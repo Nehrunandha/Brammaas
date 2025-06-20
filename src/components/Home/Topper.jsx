@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import ribbon from "../../assets/ribbon.png";
 
 const toppers = [
@@ -23,6 +24,11 @@ const toppers = [
 ];
 
 const Toppers = () => {
+  const navigate = useNavigate(); // 👈 initialize navigate
+
+  const handleViewAll = () => {
+    navigate("/toppers"); // 👈 replace with your target route
+  };
   return (
     <div className="top py-3 mt-5"> <h2 className=" course-h4 mb-4 text-left mt-4 fw-bold ms-lg-5 py-3 px-2 " style={{color:'#000863'}}>OUR TOPPERS</h2>
     <div className="toppers-container d-flex flex-column flex-lg-row justify-content-center align-items-center gap-5 flex-wrap">
@@ -30,7 +36,8 @@ const Toppers = () => {
   {toppers.map((topper, index) => (
     <div className="topper-card text-center" key={index}>
       <div className="topper-image-wrapper position-relative">
-        <img src={topper.image} alt="Topper" className="topper-image img-fluid rounded-circle" style={{height:'300px',borderRadius:'50%'}} />
+        <img src={topper.image} alt="Topper" className="topper-image img-fluid rounded-circle"
+         style={{height:'300px',borderRadius:'50%'}} />
         <div className="score-badge d-flex flex-column align-items-center justify-content-center">
           <img src={require("../../assets/score.png")} alt="Score Badge" className="score-badge-img" />
           <div className="score-text text-white">
@@ -52,7 +59,7 @@ const Toppers = () => {
   ))}
 </div>
 <div className="text-end mt-3 mb-5 px-4">
-          <button className="btn btn-outline-primary  fw-bold px-4 py-2 rounded-pill">
+          <button className="btn btn-outline-primary  fw-bold px-4 py-2 rounded-pill" onClick={handleViewAll}>
             View All
           </button>
         </div>

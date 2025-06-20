@@ -7,7 +7,7 @@ const SupportSection = () => {
   return (
     <div className="container-fluid py-5 mb-4"
      style={{
-    background: "linear-gradient(to right, #000863,#FF9500D9,#FF9500B2)",
+    background: "linear-gradient(to right, #000863,#FF9500D9,#FF9500B2,#000863)",
   }}>
       <div className="row justify-content-center g-4">
 

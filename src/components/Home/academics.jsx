@@ -82,6 +82,7 @@ const RelatedCourse = () => {
   className="d-none d-md-block position-absolute top-50 end-0 translate-middle-y"
   width="30"
   height="30"
+  translat
   style={{ cursor: 'pointer', zIndex: 10 }}
 />
 

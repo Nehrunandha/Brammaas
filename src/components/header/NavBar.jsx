@@ -26,7 +26,7 @@ function NavBar() {
            <Nav.Link as={Link} to={"/"}>HOME</Nav.Link>
             <Nav.Link href="#">ADMISSION</Nav.Link>
             <NavDropdown
-              title={<span className="text-white fw-bold">ACADMICS</span>}
+              title={<span className="text fw-bold">ACADMICS</span>}
               id="basic-nav-dropdown"
               className="academics-dropdown text-white"
             >
@@ -34,7 +34,7 @@ function NavBar() {
               <NavDropdown.Item href="#">Subjects</NavDropdown.Item>
               <NavDropdown.Item href="#">Time Table</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#">TOPPERS</Nav.Link>
+            <Nav.Link as={Link} to={"/Toppers"}>TOPPERS</Nav.Link>
             <Nav.Link href="#">GALLERY</Nav.Link>
             <Nav.Link as={Link} to={"/Infrastructure"}>INFRASTRUCTURE</Nav.Link>
             <Nav.Link href="http://192.168.1.31:3000/AboutUs">ABOUT US</Nav.Link>

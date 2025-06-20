@@ -36,7 +36,7 @@ const ParentsTestimonials = () => {
 
       {/* Testimonial Cards */}
       <div className="container">
-        <div className="row justify-content-center g-5">
+        <div className="row justify-content-center g-4">
           {testimonials.map((item, index) => (
             <div className="col-12 col-sm-6 col-lg-4 " key={index}>
               <div className="bg-white rounded shadow p-4 pt-5 position-relative text-center h-100 mt-3 mb-sm-5">

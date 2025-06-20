@@ -1,6 +1,6 @@
 import React from "react";
 import bannerBg from "../../assets/school.jpg";
-
+import { Link } from "react-router-dom";
 const TopBanner = () => {
   return (
     <div
@@ -27,7 +27,19 @@ const TopBanner = () => {
         style={{ zIndex: 2 }}
       >
         <h1 className="fw-bold display-5">OUR TOPPERS</h1>
-        <p className="lead">Home &gt; our toppers</p>
+       <nav aria-label="breadcrumb" >
+          <ol className="breadcrumb mb-0 fw-medium fs-5">
+            <li className="breadcrumb-item">
+              <Link to="/" className="text-white text-decoration-none fw-semibold">
+                Home
+              </Link>
+            </li>
+            <i className="bi bi-chevron-right mx-2 text-white"></i>
+            <li className="breadcrumb-item active text-white" aria-current="page">
+              OUR TOPPERS
+            </li>
+          </ol>
+        </nav>
       </div>
     </div>
   );
