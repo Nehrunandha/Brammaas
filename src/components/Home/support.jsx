@@ -1,39 +1,55 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import searchIcon from "../../assets/search-icon.png"; 
-import helpIcon from "../../assets/help-icon.png";     
+import bgImage from '../../assets/Bottom.png'; // replace with your image path
+import search from '../../assets/search.png'
+import what from '../../assets/what.png'
+export default function BackgroundSection() {
+  const section = [
+    {
+      img: search,
+      title:"Find Your Academics.",
+      content:"we have an array of Academics to choose from",
+      field:"BROWSE ACADEMICS"
+    },
+    {
+      img: what,
+      title:"Need Help",
+      content:"Write your query & we’ll be happy to help",
+      field:"GET IN TOUCH"
+    }
+  ]
 
-const SupportSection = () => {
   return (
-    <div className="container-fluid py-5 mb-4"
-     style={{
-    background: "linear-gradient(to right, #000863,#FF9500D9,#FF9500B2,#000863)",
-  }}>
-      <div className="row justify-content-center g-4">
-
-        {/* Search Support Card */}
-        <div className="col-12 col-md-6">
-          <div className="text-center p-4 border rounded shadow h-100 ">
-            <img src={searchIcon} alt="Search Icon" className="mb-3" style={{ width: "50px" }} />
-            <h4 className="fw-bold">Find Your Academics</h4>
-            <p className="text-muted">We have an array of Academics to choose from</p>
-            <button className="btn btn-primary px-4 mt-2">BROWSE ACADEMICS</button>
+    <section className="container-fluid py-5">
+  <div className="row justify-content-center py-5">
+    {section.map((item, index) => (
+      <div key={index} className="col-12 col-md-6 mb-4 d-flex justify-content-center">
+        <div
+          className="position-relative text-white d-flex align-items-center justify-content-center"
+          style={{
+            backgroundImage: `linear-gradient(to right, rgba(0, 8, 99, 0.75), rgba(255, 149, 0, 0.8), rgba(255, 149, 0, 0.7)), url(${bgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            minHeight: '400px',
+            width: '100%',
+            maxWidth: '736px'
+          }}
+        >
+          <div className="text-center">
+            <img src={item.img} alt="icon" />
+            <h2>{item.title}</h2>
+            <p>{item.content}</p>
+            <button
+              className="border-1 border-white text-white"
+              style={{ padding: '5px 25px', backgroundColor: '#FF9500' }}
+            >
+              {item.field}
+            </button>
           </div>
         </div>
-
-        {/* Help Support Card */}
-        <div className="col-12 col-md-6">
-          <div className="text-center p-4 border rounded shadow h-100 ">
-            <img src={helpIcon} alt="Help Icon" className="mb-3" style={{ width: "50px" }} />
-            <h4 className="fw-bold">Need Help</h4>
-            <p className="text-muted">Write your query & we’ll be happy to help</p>
-            <button className="btn btn-warning text-white px-4 mt-2">GET IN TOUCH</button>
-          </div>
-        </div>
-
       </div>
-    </div>
-  );
-};
+    ))}
+  </div>
+</section>
 
-export default SupportSection;
+  );
+}

@@ -6,7 +6,7 @@ import WhyUs from "./whyus.jsx"
 import ParentsTestimonials from "./parent.jsx"
 import Toppers from "./Topper.jsx"
 import Gallery from "./gallery.jsx"
-import SupportSection from "./support.jsx"
+import BackgroundSection from "./support.jsx"
 
 export default function Home() {
     return ( 
@@ -19,7 +19,7 @@ export default function Home() {
         <ParentsTestimonials/>
         <Toppers/>
         <Gallery/>
-        <SupportSection/>
+        <BackgroundSection/>
         </>
     )
 }
